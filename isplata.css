@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: auto;
+    min-height: 100vh;
+    background: url(pozadina\.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 2em;
+    color: #162938;
+    user-select: none;
+}
+
+.slika {
+    height: 70px;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    bottom: -6px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.navigation a:hover:after {
+    transform: scaleX(1);
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left,
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    padding: 10px;
+    background: transparent;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    width: 300px;
+    height: 400px;
+}
+
+.left {
+    margin-right: 15px;
+}
+
+.dugovanja,
+.isplaceno {
+    width: calc(50% - 7.5px);
+    height: 90%;
+    
+    width: 290px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    height: 20px;
+    color: white;
+}
+td{
+    border-bottom: 1px solid #ddd;
+}
+
+.naziv{
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center ;
+    width: 90%;
+    height: 25px;
+    border-bottom: 1px solid #ddd;
+    color: whitesmoke;
+}
+
+th:first-child, td:first-child {
+    border-left: none;
+}
+
+th:last-child, td:last-child {
+    border-right: none;
+}
+
+
+.suma,.suma2 {
+    height: 50px;
+    width: 50%;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    margin-top: 10px;
+}
+.suma{
+    margin-right: 3px;
+}
+h1{
+    font-size: 12px;
+    text-align: center;
+}
+h2{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+.swrapper{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+.hello {
+    font-size: 2em;
+    color: lightgray;
+    text-align: center;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        padding: 10px 10%;
+    }
+
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    
+    .right , .left{
+        height: 300px;
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+    
+}
